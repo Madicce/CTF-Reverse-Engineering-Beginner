@@ -29,7 +29,7 @@ Pour commencer :
 Les titres des challenges donnent (normalement) un petit indice sur ce qui t’attend…
 
 1. **Challenge 1** : *Un string ?* — Débutant  
-2. **Challenge 2** : *Comment on XOR, déjà ?* — Intermédiaire *(en cours de création)*  
+2. **Challenge 2** : *Comment on XOR, déjà ?* — Intermédiaire   
 3. **Challenge 3** : *Le code change, tout seul…* — Expert *(en cours de création)*  
 
 ---
