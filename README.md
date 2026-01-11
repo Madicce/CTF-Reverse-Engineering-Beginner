@@ -1,4 +1,4 @@
-# CTF-Reverse-Engineering 🧩
+# CTF-Reverse-Engineering-Beginner 🧩
 
 Bienvenue dans **CTF-Reverse-Engineering** !  
 Ici, pas de magie noire (enfin… presque), juste du **reverse engineering** progressif et pédagogique 🧠
@@ -30,7 +30,7 @@ Les titres des challenges donnent (normalement) un petit indice sur ce qui t’a
 
 1. **Challenge 1** : *Un string ?* — Débutant  
 2. **Challenge 2** : *Comment on XOR, déjà ?* — Intermédiaire   
-3. **Challenge 3** : *Le code change, tout seul…* — Expert *(en cours de création)*  
+3. **Challenge 3** : *En statique tu analyseras, la vérité se dévoilera* — Difficile  
 
 ---
 
