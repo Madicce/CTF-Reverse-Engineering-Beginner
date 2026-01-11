@@ -1,3 +1,37 @@
+# # Solution Guide: In static analysis you shall analyze, the truth will be revealed
+
+Objective: always find the flag encoded in the code. But here, there are a few subtleties.
+
+## Solution
+
+### Tools Used
+- `file` command
+- Ghidra
+
+### Step 1: Identify the File Type Using the `file` Command
+
+```bash
+file <file>
+```
+
+This allows you to identify the file format and type you are dealing with (for example, whether it is a 32-bit or 64-bit ELF).
+
+### Step 2: Set Up the Project in Ghidra
+
+As with the other challenges, open the binary in Ghidra.
+
+### Step 3: Perform Static Analysis
+
+In the challenge title, it says "in static analysis you shall analyze" — is that a coincidence? Probably not 🙂
+
+Start by analyzing the entry function and then all the others. You will notice that one of them is a decoy designed to modify the correct flag when the program is executed with GDB. So ignore it — it’s a trap!
+
+Instead, analyze the other functions, just like in the previous challenge.
+
+Flag: `congratulations`
+
+---
+
 # Guide de résolution : En statique tu analyseras, la vérité se dévoilera
 
 Objectif : toujours trouver le flag encodé dans le code. Mais ici, il y a quelques subtilités.

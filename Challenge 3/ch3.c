@@ -3,44 +3,46 @@
 #include <string.h>
 #include <sys/ptrace.h>
 
-#define FLAG_LEN 15
+#define DHFNCJBFUFBSJBSU 15
 
-int anti_debug(void) {
+int hsjvsbhfjbfhgzeifj(void) {
   if (ptrace(PTRACE_TRACEME, 0, 1, 0) == -1)
     return 1;
   return 0;
 }
 
-int fake_check(char *input) {
-  static unsigned char fake[3] = {0x22, 0x2e, 0x2f};
+int hdmfpbtsvxhsbhdu(char *jdghshubcjbshsbjcbhfb) {
+  static unsigned char hdvhsgubdujbujsbgdchn[3] = {0x22, 0x2e, 0x2f};
 
   for (int i = 0; i < 3; i++) {
-    if ((input[i] ^ 0x41) != fake[i])
+    if ((jdghshubcjbshsbjcbhfb[i] ^ 0x41) != hdvhsgubdujbujsbgdchn[i])
       return 0;
   }
   return 1;
 }
 
-void build_flag(char *out, int debugged) {
-  unsigned char a[FLAG_LEN] = {0xc9, 0xc4, 0xc6, 0xce, 0xc4, 0xf6, 0xc4, 0xc4,
-                               0xce, 0xf2, 0xc0, 0xf4, 0xc9, 0xcb, 0xcf};
+void jdhbfgtfsrvdhfyrksmpl(char *jcbdgtqfrahduflpsg, int hgsravdejvddb) {
+  unsigned char a[DHFNCJBFUFBSJBSU] = {0xc9, 0xc4, 0xc6, 0xce, 0xc4,
+                                       0xf6, 0xc4, 0xc4, 0xce, 0xf2,
+                                       0xc0, 0xf4, 0xc9, 0xcb, 0xcf};
 
-  unsigned char b[FLAG_LEN] = {0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa,
-                               0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa};
+  unsigned char b[DHFNCJBFUFBSJBSU] = {0xaa, 0xaa, 0xaa, 0xaa, 0xaa,
+                                       0xaa, 0xaa, 0xaa, 0xaa, 0xaa,
+                                       0xaa, 0xaa, 0xaa, 0xaa, 0xaa};
 
-  for (int i = 0; i < FLAG_LEN; i++) {
-    out[i] = (a[i] ^ b[i]) + i;
-    if (debugged)
-      out[i] ^= 0x13;
+  for (int i = 0; i < DHFNCJBFUFBSJBSU; i++) {
+    jcbdgtqfrahduflpsg[i] = (a[i] ^ b[i]) + i;
+    if (hgsravdejvddb)
+      jcbdgtqfrahduflpsg[i] ^= 0x13;
   }
 }
 
-int real_check(char *input, int debugged) {
-  char flag[FLAG_LEN];
-  build_flag(flag, debugged);
+int pdjyebdbqfdtflcjsb(char *jdghshubcjbshsbjcbhfb, int hgsravdejvddb) {
+  char hdjfybcgtfrqsfzrdfmpljguyd[DHFNCJBFUFBSJBSU];
+  jdhbfgtfsrvdhfyrksmpl(hdjfybcgtfrqsfzrdfmpljguyd, hgsravdejvddb);
 
-  for (int i = 0; i < FLAG_LEN; i++) {
-    if (input[i] != flag[i])
+  for (int i = 0; i < DHFNCJBFUFBSJBSU; i++) {
+    if (jdghshubcjbshsbjcbhfb[i] != hdjfybcgtfrqsfzrdfmpljguyd[i])
       return 0;
   }
   return 1;
@@ -52,14 +54,14 @@ int main(int argc, char **argv) {
     return 1;
   }
 
-  if (strlen(argv[1]) != FLAG_LEN) {
+  if (strlen(argv[1]) != DHFNCJBFUFBSJBSU) {
     printf("Try again\n");
     return 1;
   }
 
-  int debugged = anti_debug();
+  int hgsravdejvddb = hsjvsbhfjbfhgzeifj();
 
-  if (!fake_check(argv[1])) {
+  if (!hdmfpbtsvxhsbhdu(argv[1])) {
     printf("Try again\n");
     return 1;
   } else {
@@ -67,7 +69,7 @@ int main(int argc, char **argv) {
     return 0;
   }
 
-  if (real_check(argv[1], debugged)) {
+  if (pdjyebdbqfdtflcjsb(argv[1], hgsravdejvddb)) {
     printf("Well done!\n");
   } else {
     printf("Try again\n");

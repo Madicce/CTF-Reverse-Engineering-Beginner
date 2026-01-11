@@ -1,3 +1,37 @@
+# Solution Guide: How Do You XOR Again?
+
+Objective: find the flag hidden in the binary.
+
+## Solution
+
+### Tools Used
+
+- `file` command
+- Ghidra
+
+### Step 1: Identify the File Type Using the `file` Command
+
+```bash
+file <file>
+```
+
+This allows you to identify the file format and type you are dealing with (for example, whether it is a 32-bit or 64-bit ELF).
+
+### Step 2: Set Up the Project in Ghidra
+
+Just like the first challenge, open the binary in Ghidra.
+
+### Step 3: Observe the Function That XORs the Input with the Encoded Flag
+
+First, you need to identify the encoded array. As in the first CTF, the array is located at the very beginning of the binary.
+
+Next, observe the loop that performs a XOR operation between a hexadecimal value and the user input using the encoded array.
+Yes, really! You just need to XOR each value of the encoded array to recover the flag!
+
+Flag: `printf_debugging`
+
+---
+
 # Guide de résolution : Comment on XOR, déjà ?
 
 Objectif : trouver le flag caché dans le binaire

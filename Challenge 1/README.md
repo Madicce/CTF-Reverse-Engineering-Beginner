@@ -1,3 +1,41 @@
+# Solution Guide: A String?
+
+Goal: find the "hidden" flag in the binary.
+
+## Solution
+
+### Tools Used
+
+- Linux `file` command
+- Ghidra
+
+### Step 1: Identify the File Type Using the `file` Command
+
+```bash
+file <file>
+```
+This allows you to identify the file format and type you are dealing with (for example, whether it is a 32-bit or 64-bit ELF).
+
+### Step 2: Set Up the Project in Ghidra
+
+Start by launching Ghidra and creating a new project.
+Then import the challenge binary into this project and run the automatic analysis to allow Ghidra to identify functions, variables, and the overall program structure.
+
+### Step 3: Search for Strings
+
+Use Ghidra’s Strings tool to display the strings present in the binary.
+In many beginner reverse engineering challenges, the flag or important clues are stored as readable text. A simple inspection of the strings is often enough to spot them quickly.
+
+In this challenge, the flag can be found directly in the section containing the strings.
+
+### Step 4: Extract the Flag
+
+The flag appears as a readable string inside the binary. You simply need to copy it directly from the list of strings displayed by Ghidra.
+
+Flag: `easy_reverse`
+
+---
+
 # Guide de résolution : un string ?
 
 But : trouver le flag "caché" dans le binaire
