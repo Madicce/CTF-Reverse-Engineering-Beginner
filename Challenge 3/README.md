@@ -1,4 +1,4 @@
-# # Solution Guide: In static analysis you shall analyze, the truth will be revealed
+# Solution Guide: In static analysis you shall analyze, the truth will be revealed
 
 Objective: always find the flag encoded in the code. But here, there are a few subtleties.
 
