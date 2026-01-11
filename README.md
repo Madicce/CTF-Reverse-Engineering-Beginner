@@ -34,7 +34,7 @@ The challenge titles (normally) give you a small hint about what to expect…
 
 ---
 
-## Your turn — and happy CTFing! 🚩
+## Your turn, and happy CTFing! 🚩
 
 ---
 
